@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+import Root from "./routes/root";
+import ErrorPage from "./error-page";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,7 +11,8 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
